@@ -35,7 +35,7 @@ app.post('/',function(req,res){
     const url = "https://us8.api.mailchimp.com/3.0/lists/21607e89e3"
 
     const options = {
-        action : "POST",
+        method : "POST",
         auth : "raghav:40bf20e3c2df4d2c0aee89e1282ee6e4-us8"
     }
 
@@ -51,7 +51,6 @@ app.post('/',function(req,res){
             console.log(JSON.parse(data));
         })
     });
-
     request.write(jsonData);
     request.end();
 });
